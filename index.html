@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Lenna Febriana</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === SYSTEM VARIABLES (PASTEL AESTHETIC THEME) === */
+        :root {
+            --bg-body: #f6f8f6; /* Soft Pastel Mint-Cream */
+            --bg-card: #ffffff; /* Clean White */
+            --bg-card-hover: #f0fdf4; /* Soft Pastel Mint Hover */
+            
+            --border-color: #e2e8f0;
+            --border-light: #cbd5e1;
+            
+            --accent-primary: #10b981; /* Soft Emerald Green */
+            --accent-soft: #e6f7f0; /* Soft Pastel Mint Tint */
+            --accent-hover: #059669;
+
+            --text-title: #1e293b; /* Deep Slate */
+            --text-body: #475569;  /* Soft Slate */
+            --text-muted: #64748b;
+
+            /* Pastel Badges */
+            --badge-advanced-bg: #d1fae5; /* Soft Pastel Green */
+            --badge-advanced-text: #065f46;
+            --badge-inter-bg: #fef3c7; /* Soft Pastel Yellow/Amber */
+            --badge-inter-text: #92400e;
+            
+            --container-width: 1100px;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* === RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* === NAVBAR === */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(246, 248, 246, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 1.1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-title);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            padding: 5.5rem 0 3.5rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-img-wrapper img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: var(--shadow-md);
+            background: var(--bg-card);
+        }
+
+        .tag-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 30px;
+            background: var(--accent-soft);
+            color: #047857;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .hero-text h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            margin-bottom: 2rem;
+            max-width: 650px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.75rem 1.6rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-card);
+            color: var(--text-title);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f8fafc;
+            border-color: var(--text-body);
+        }
+
+        /* === STATS HIGHLIGHT === */
+        .stats-section {
+            padding: 1rem 0 3.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.6rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+        }
+
+        .stat-card h3 {
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* === SECTION COMMON === */
+        .section {
+            padding: 4.5rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--accent-primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            color: var(--text-title);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* === KEAHLIAN (RAPI & TERSTRUKTUR) === */
+        .skills-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .skill-category-title {
+            font-size: 1.1rem;
+            color: var(--text-title);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category-title i {
+            color: var(--accent-primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .skill-card-clean {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .skill-card-clean:hover {
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .skill-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-card-title {
+            font-weight: 700;
+            color: var(--text-title);
+            font-size: 1rem;
+        }
+
+        /* Status Badge Pastel */
+        .level-pill {
+            font-size: 0.72rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .level-pill.adv {
+            background-color: var(--badge-advanced-bg);
+            color: var(--badge-advanced-text);
+        }
+
+        .level-pill.int {
+            background-color: var(--badge-inter-bg);
+            color: var(--badge-inter-text);
+        }
+
+        .skill-desc {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.55;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tags span {
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 3px 9px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* === PENGALAMAN & ORGANISASI === */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1.5rem;
+        }
+
+        .timeline-meta h4 {
+            color: var(--text-title);
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .timeline-meta .period {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .timeline-body h3 {
+            color: var(--accent-primary);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .timeline-body ul {
+            padding-left: 1.2rem;
+            color: var(--text-body);
+            font-size: 0.9rem;
+        }
+
+        .timeline-body li {
+            margin-bottom: 6px;
+        }
+
+        /* === PROYEK & PORTOFOLIO === */
+        .filter-container {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-body);
+            padding: 8px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-primary);
+            color: #ffffff;
+            border-color: var(--accent-primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-content h3 {
+            color: var(--text-title);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content p {
+            color: var(--text-body);
+            font-size: 0.88rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .btn-link {
+            background: none;
+            border: none;
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* === LAYANAN FREELANCE === */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .service-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .service-box:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: var(--radius-sm);
+            background: var(--accent-soft);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-box h3 {
+            color: var(--text-title);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-box p {
+            font-size: 0.85rem;
+            color: var(--text-body);
+        }
+
+        /* === MODAL POPUP === */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.2rem; right: 1.2rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1.2rem;
+        }
+
+        .modal-box h3 {
+            color: var(--text-title);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .modal-box p {
+            color: var(--text-body);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            white-space: pre-line;
+        }
+
+        /* === KONTAK & FOOTER === */
+        .contact-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-box h2 {
+            color: var(--text-title);
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p {
+            color: var(--text-body);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            padding: 2.5rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-img-wrapper img {
+                margin: 0 auto;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .timeline-card {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        /* Custom Button Detail */
+        .btn-detail {
+            background-color: var(--accent-soft);
+            color: #047857;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .btn-detail:hover {
+            background-color: var(--accent-primary);
+            color: #ffffff;
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(4px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Modal Box */
+        .modal-box {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            max-width: 650px;
+            width: 100%;
+            padding: 2.2rem;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(20px);
+            transition: transform 0.25s ease;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+
+        .modal-detail-content {
+            display: none;
+        }
+
+        .modal-detail-content.active {
+            display: block;
+        }
+
+        .modal-title {
+            font-size: 1.4rem;
+            color: var(--text-title);
+            font-weight: 800;
+            margin: 0.4rem 0 1rem;
+        }
+
+        .modal-divider {
+            border: none;
+            height: 1px;
+            background-color: var(--border-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .modal-list {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .modal-list li {
+            margin-bottom: 0.6rem;
+            color: var(--text-body);
+        }
+
+        .project-card {
+            overflow: hidden;
+            border-radius: 12px; /* sesuaikan radius sudut kartu Anda */
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px; /* sesuaikan tinggi gambar yang diinginkan */
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* menjaga rasio gambar tetap proporsional */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efek zoom saat kartu di-hover (opsional) */
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+        /* Container Tombol Aksi pada Kartu */
+        .project-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+
+        /* Tombol GitHub */
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: #1e293b; /* Warna Slate Gelap khas GitHub */
+            color: #ffffff;
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid #0f172a;
+        }
+
+        .btn-github:hover {
+            background-color: #0f172a;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        /* Tombol Tableau */
+        .btn-tableau{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: #f2f2f2; /* Warna Slate Gelap khas GitHub */
+            color: #195672;
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid #ffffff;
+        }  
+        
+        /* Grid Sertifikat */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        /* Card Sertifikat */
+        .certificate-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-color: #d1d5db;
+        }
+
+        /* Bagian Atas Card */
+        .certificate-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .certificate-icon {
+            width: 48px;
+            height: 48px;
+            background: #f0f7ff;
+            color: #2563eb;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .certificate-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #f3f4f6;
+            color: #4b5563;
+        }
+
+        .badge-national {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        /* Konten Isi */
+        .certificate-content h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .certificate-issuer {
+            font-size: 0.85rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .certificate-desc {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Card */
+        .certificate-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px dashed #e5e7eb;
+            font-size: 0.85rem;
+        }
+
+        .certificate-date {
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-verify {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+
+        .btn-verify:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        /* Container Kontak */
+        .contact-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-description {
+            color: #4b5563;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 680px;
+            margin: 12px auto 0 auto;
+        }
+
+        /* Grid Card Kontak */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* Kartu Kontak */
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-color: #d1d5db;
+        }
+
+        /* Icon Styles & Warna */
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .email-bg { background-color: #fef2f2; color: #ef4444; }
+        .wa-bg { background-color: #f0fdf4; color: #16a34a; }
+        .linkedin-bg { background-color: #eff6ff; color: #0284c7; }
+        .github-bg { background-color: #f3f4f6; color: #1f2937; }
+
+        /* Teks Detail */
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-details h3 {
+            margin: 2px 0 0 0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .contact-details p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* Panah Indikator */
+        .contact-arrow {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .contact-card:hover .contact-arrow {
+            color: #111827;
+            transform: translate(2px, -2px);
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Lenna<span>Febriana</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#certificates">Sertifikat</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-img-wrapper">
+                <img src="Lenna Febriana_Foto2.JPG" alt="Lenna Febriana">
+            </div>
+            <div class="hero-text">
+                <span class="tag-status"><i class="fa-solid fa-circle-check"></i> Terbuka untuk Peluang Kerja</span>
+                <h1>Lenna Febriana</h1>
+                <p>Lulusan Sistem Informasi dengan spesialisasi pada <strong>Data Science, Business Intelligence, serta Deep Learning (Computer Vision & RAG)</strong></p>
+                <div class="hero-actions">
+                    <a href="#proyek" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> Lihat Proyek</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <h3>10+</h3>
+                <p>Proyek AI & Sistem Data</p>
+            </div>
+            <div class="stat-card">
+                <h3>BNSP</h3>
+                <p>Associate Data Scientist Certified</p>
+            </div>
+            <div class="stat-card">
+                <h3>1+ Tahun</h3>
+                <p>Pengalaman Riset & Pengolahan Data</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Profil Singkat</span>
+                <h2 class="section-title">Tentang Saya</h2>
+            </div>
+            <p style="max-width: 800px; color: var(--text-body); line-height: 1.8;">
+                Saya merupakan lulusan Sistem Informasi dari <strong>Institut Teknologi Del</strong>. Memiliki minat dan keahlian mendalam dalam membangun model Machine Learning & Deep Learning (khususnya arsitektur MobileNetV2 dan RAG), analisis data bisnis, 
+                serta otomatisasi alur kerja sistem menggunakan n8n. Pernah berpengalaman sebagai Business Intelligence Intern di PT Telkominfra serta aktif memimpin organisasi mahasiswa (BEM) menjadi mantan ketua divisi bilateral di DHPM (Departemen Hubungan dan Pengabdian Masyarakat).
+            </p>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN  -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Kompetensi Teknikal</span>
+                <h2 class="section-title">Keahlian & Tingkat Kemahiran</h2>
+            </div>
+
+            <div class="skills-wrapper">
+                
+                <!-- KATEGORI 1 -->
+                <div>
+                    <h3 class="skill-category-title"><i class="fa-solid fa-brain"></i> 1. AI, Deep Learning & RAG Architecture</h3>
+                    <div class="skills-grid">
+                        
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">Computer Vision & MobileNetV2</span>
+                                <span class="level-pill adv">Lanjutan</span>
+                            </div>
+                            <p class="skill-desc">Memiliki pengalaman dalam klasifikasi citra, fine-tuning model deep learning, serta penerapan arsitektur CNN</p>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>Keras</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">RAG Systems & Vector Store</span>
+                                <span class="level-pill adv">Lanjutan</span>
+                            </div>
+                            <p class="skill-desc">Pengembangan RAG terintegrasi LLM dengan Supabase Vector Store & Cohere Rerank untuk jawaban berbasis fakta.</p>
+                            <div class="skill-tags">
+                                <span>Supabase</span>
+                                <span>Gemini API</span>
+                                <span>Cohere</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- KATEGORI 2 -->
+                <div>
+                    <h3 class="skill-category-title"><i class="fa-solid fa-diagram-project"></i> 2. Data Science & Otomatisasi Workflow</h3>
+                    <div class="skills-grid">
+                        
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">Otomatisasi Workflow (n8n)</span>
+                                <span class="level-pill adv">Lanjutan</span>
+                            </div>
+                            <p class="skill-desc">Perancangan pipeline otomatisasi terhubung Django, AI Agent, database, dan rantai evaluasi terstruktur.</p>
+                            <div class="skill-tags">
+                                <span>n8n</span>
+                                <span>API Integration</span>
+                                <span>Django</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">Data Analytics & RapidMiner</span>
+                                <span class="level-pill int">Menengah</span>
+                            </div>
+                            <p class="skill-desc">Pemodelan data analitik, clustering, klasifikasi statistik, dan pembersihan data berbasis sertifikasi BNSP.</p>
+                            <div class="skill-tags">
+                                <span>RapidMiner</span>
+                                <span>SQL</span>
+                                <span>Excel</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- KATEGORI 3 -->
+                <div>
+                    <h3 class="skill-category-title"><i class="fa-solid fa-pen-nib"></i> 3. Desain, Formatting & Productivity Tools</h3>
+                    <div class="skills-grid">
+                        
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">UI/UX & Desain Grafis</span>
+                                <span class="level-pill int">Menengah</span>
+                            </div>
+                            <p class="skill-desc">Pembuatan prototipe antarmuka UI/UX di Figma, konseptualisasi logo, serta penyusunan slide presentasi Canva.</p>
+                            <div class="skill-tags">
+                                <span>Figma</span>
+                                <span>Canva</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-clean">
+                            <div class="skill-card-top">
+                                <span class="skill-card-title">Document Formatting & Layouting</span>
+                                <span class="level-pill adv">Lanjutan</span>
+                            </div>
+                            <p class="skill-desc">Penyusunan tata letak dokumen akademik, rekapitulasi data, dan laporan resmi.</p>
+                            <div class="skill-tags">
+                                <span>Ms Word</span>
+                                <span>Google Docs</span>
+                                <span>Spreadsheet</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Rekam Jejak</span>
+                <h2 class="section-title">Pengalaman & Sertifikasi</h2>
+            </div>
+
+            <div class="timeline">
+                
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <h4>PT Telkominfra</h4>
+                        <div class="period">Magang Industri</div>
+                    </div>
+                    <div class="timeline-body">
+                        <h3>Business Intelligence Intern</h3>
+                        <ul>
+                            <li>Mengolah data operasional dan membangun pipeline data sederhana untuk mendukung efisiensi pelaporan internal.</li>
+                            <li>Mengembangkan visualisasi data dan dashboard performa bisnis untuk manajemen.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <h4>Komdigi & BNSP</h4>
+                        <div class="period">Sertifikasi Resmi</div>
+                    </div>
+                    <div class="timeline-body">
+                        <h3>Associate Data Scientist (Digital Talent Scholarship)</h3>
+                        <ul>
+                            <li>Menyelesaikan skema pelatihan Vocational School Graduate Academy (VSGA) dengan fokus RapidMiner.</li>
+                            <li>Lulus uji kompetensi dan meraih sertifikasi Associate Data Scientist dari Badan Nasional Sertifikasi Profesi (BNSP).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <h4>Badan Executive Mahasiswa</h4>
+                        <div class="period">Institut Teknologi Del</div>
+                    </div>
+                    <div class="timeline-body">
+                        <h3>Kepala Divisi Departemen Hubungan dan Pengabdian Masyarakat</h3>
+                        <ul>
+                            <li>Mengkoordinasikan program kerja pengabdian masyarakat dan hubungan antar lembaga.</li>
+                            <li>Memimpin tim dalam eksekusi kegiatan sosial dan akademik mahasiswa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK -->
+    <!-- PROYEK SECTION -->
+                <section class="section" id="proyek">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-subtitle">Portofolio</span>
+                            <h2 class="section-title">Proyek Unggulan</h2>
+                        </div>
+
+                        <div class="projects-grid">
+                            <!-- Proyek 1 -->
+                            <div class="project-card">
+                                <!-- Kontainer Gambar Proyek -->
+                                <div class="project-img">
+                                    <img src="image.png">
+                                </div>
+                                <div class="project-content">
+                                    <span class="project-tag">Deep Learning &amp RAG.</span>
+                                    <h3 class="project-title">Preserving Batak Toba Motifs with Deep Learning and RAG</h3>
+                                    <p class="project-desc">Sistem klasifikasi motif Batak Toba menggunakan MobileNetV2 yang diintegrasikan dengan arsitektur RAG untuk edukasi budaya yang akurat.</p>
+                                    <div class="skill-tags" style="margin-bottom: 1.2rem;">
+                                        <span>MobileNetV2</span>
+                                        <span>RAG</span>
+                                        <span>Supabase</span>
+                                    </div>
+                                    <button class="btn-detail" onclick="openModal('modal-1')">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Proyek 2 -->
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="image2.png">
+                                </div>
+                                <div class="project-content">
+                                    <span class="project-tag">Otomatisasi &amp; Workflow</span>
+                                    <h3 class="project-title">Automation Pipeline berbasis n8n</h3>
+                                    <p class="project-desc">Merancang dan mengimplementasikan alur kerja otomatisasi end-to-end menggunakan n8n Workflow Engine untuk menghubungkan antarmuka Telegram, AI Agent, dan sistem evaluasi otomatis (LLM-as-a-Judge).</p>
+                                    <div class="skill-tags" style="margin-bottom: 1.2rem;">
+                                        <span>n8n</span>
+                                        <span>Automation</span>
+                                        <span>AI Agent</span>
+                                    </div>
+                                    <button class="btn-detail" onclick="openModal('modal-2')">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Proyek 3 -->
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="Dashboard 1.png">
+                                </div>
+                               <div class="project-content">
+                                    <span class="project-tag">Business Intelligence</span>
+                                        <h3 class="modal-title">Perancangan Dashboard Optimasi Panel Surya Berdasarkan Data Iradiasi Harian</h3>
+                                        <p class= "project-desc"> Pengembangan sistem dashboard interaktif berbasis visualisasi data untuk membantu PT Telkom Infrastruktur Indonesia menentukan arah dan sudut kemiringan terbaik bagi panel surya di wilayah Jakarta Selatan.</p>
+                                    <div class="skill-tags" style="margin-bottom: 1.2rem;">
+                                        <span>Tableau</span>
+                                        <span>Pentaho</span>
+                                        <span>Excel</span>
+                                        <span>Data Analytics</span>
+                                    </div>
+                                    <button class="btn-detail" onclick="openModal('modal-3')">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MODAL CONTAINER (Jendela Detail Proyek) -->
+                <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+                    <div class="modal-box">
+                        <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+                        
+                        <!-- Isi Detail Proyek 1 -->
+                        <div class="modal-detail-content" id="modal-1">
+                            <span class="project-tag">Deep Learning &amp; RAG</span>
+                            <h2 class="modal-title">Klasifikasi Motif Batak Toba &amp; Edukasi Budaya Berbasis RAG</h2>
+                            <hr class="modal-divider">
+                            
+                            <p><strong>Deskripsi Lengkap:</strong><br>
+                            Platform simulator edukasi budaya digital terintegrasi yang menggabungkan Computer Vision dan Natural Language Processing untuk melestarikan cagar budaya kain tenun Ulos Batak Toba. Sistem mampu mengidentifikasi 14 jenis ulos secara otomatis lewat unggahan gambar, sekaligus menghasilkan narasi penjelasan filosofis yang valid secara ilmiah, kontekstual, dan bebas dari risiko halusinasi data.</p>
+                            
+                            <p><strong>Pencapaian &amp; Metrik Utama:</strong></p>
+                            <ul class="modal-list">
+                                <li><strong>Akurasi Global 91,79%:</strong> Model klasifikasi berhasil mengenali corak visual kompleks secara presisi dengan <em>Weighted F1-Score</em> sebesar 92,03%.</li>
+                                <li><strong>Evaluasi Faktual Maksimal (Skor 5/5):</strong> Pengujian kualitatif berbasis pendekatan <em>LLM-as-a-Judge</em> memastikan seluruh narasi 100% akurat terhadap ground truth ilmiah.</li>
+                                <li><strong>Zero-Error pada Kelas Minoritas:</strong> Optimalisasi fungsi pemrograman <em>class weights</em> berhasil mengeliminasi kesalahan prediksi pada kelas kain minoritas/langka (seperti kelas Runjat dan Pinan Lobu-Lobu).</li>
+                                <li><strong>Bebas Kebocoran Data:</strong> Penerapan teknik <em>stratified grouped split</em> berbasis image group untuk mengunci data augmentasi, memastikan validitas hasil pengujian model.</li>
+                            </ul>
+
+                            <p><strong>Pendekatan &amp; Arsitektur Teknikal:</strong></p>
+                            <ul class="modal-list">
+                                <li><strong>Computer Vision (Deep Learning):</strong> Menggunakan pendekatan <em>Transfer Learning &amp; Fine-Tuning</em> dengan arsitektur <em>MobileNetV2</em> (Depthwise Separable Convolutions) yang diintegrasikan ke framework backend <em>Django</em>.</li>
+                                <li><strong>RAG Pipeline &amp; Data Orchestrator:</strong> Alur otomatisasi end-to-end dikelola menggunakan platform <em>n8n Engine</em>. Menggunakan <em>Google Gemini Embedding</em> dan pencarian semantik pada <em>Supabase Vector Store</em> untuk menarik 20 kandidat dokumen (Top-K=20).</li>
+                                <li><strong>Penyaringan Presisi (Two-Stage Retrieval):</strong> Kandidat informasi disaring ulang menggunakan <em>Cohere Reranker Engine</em> (Top-N=1) dengan pengaturan temperatur rendah (0.1) untuk menjamin jawaban yang dihasilkan bersifat deterministik dan berbasis fakta jurnal ilmiah terverifikasi.</li>
+                            </ul>
+                            <!-- Tautan Platform di Dalam Modal -->
+                            <div class="modal-actions" style="margin-top: 1.5rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://github.com/lennafebriana12/Preserving-Batak-Toba-Motifs-with-Deep-Learning-and-RAG" target="_blank" rel="noopener noreferrer" class="btn-github">
+                                    <i class="fa-brands fa-github"></i> Repository GitHub
+                                </a>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Isi Detail Proyek 2 -->
+                        <div class="modal-detail-content" id="modal-2">
+                            <span class="project-tag">Otomatisasi &amp; Workflow</span>
+                            <h2 class="modal-title">Automation Pipeline &amp; Sistem Evaluasi Otomatis Berbasis n8n</h2>
+                            <hr class="modal-divider">
+                            <p><strong>Deskripsi Lengkap:</strong><br>
+                            Perancangan dan implementasi alur kerja otomatisasi end-to-end menggunakan n8n Workflow Engine untuk menghubungkan antarmuka Telegram, AI Agent, dan sistem evaluasi otomatis (LLM-as-a-Judge). Sistem ini berfungsi secara mandiri untuk menilai tingkat akurasi dan kebenaran data edukasi budaya yang dihasilkan oleh AI dengan membandingkannya secara langsung terhadap dokumen ilmiah (ground truth) sebelum data tersebut digunakan atau disajikan kepada pengguna.</p>
+                            
+                            <p><strong>Fitur &amp; Arsitektur:</strong></p>
+                            <ul class="modal-list">
+                                <li><strong>Automated Testing Loop:</strong> Mengintegrasikan <em>Telegram Trigger</em> sebagai pusat pengujian instan untuk menerima kueri kebudayaan sekaligus mengirimkan metrik hasil evaluasi secara otomatis.</li>
+                                <li><strong>Dynamic Context Extraction:</strong> Memanfaatkan komponen kustom <em>Code Context</em> untuk mengekstraksi, membersihkan, dan menyusun referensi dokumen dari <em>Supabase Evidence</em> sebagai jangkar kebenaran ilmiah bagi mesin penilai.</li>
+                                <li><strong>Two-Stage Semantic Retrieval:</strong> Menggabungkan <em>Supabase Vector Store DB</em> dengan <em>Embeddings Google Gemini</em> dan <em>Cohere Reranker Engine</em> untuk memastikan AI Agent menarik potongan informasi paling presisi dari basis pengetahuan.</li>
+                                <li><strong>Multi-Aspect Cross Evaluation:</strong> Memanfaatkan node <em>Basic LLM Chain</em> berkemampuan Gemini untuk melakukan penilaian silang secara objektif terhadap luaran AI Agent berdasarkan aspek <em>Correctness</em>, <em>Relevance</em>, dan <em>Faithfulness</em> dengan hasil akhir berupa data JSON terstruktur.</li>
+                            </ul>
+                             <!-- Tautan Platform di Dalam Modal -->
+                            <div class="modal-actions" style="margin-top: 1.5rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://github.com/lennafebriana12/Preserving-Batak-Toba-Motifs-with-Deep-Learning-and-RAG" target="_blank" rel="noopener noreferrer" class="btn-github">
+                                    <i class="fa-brands fa-github"></i> Repository GitHub
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Isi Detail Proyek 3 --> 
+                         <div class="modal-detail-content" id="modal-3">
+                           <span class="project-tag">Business Intelligence &amp; Visualisasi Data</span> 
+                            <h2 class="modal-title">Dashboard Optimasi Arah &amp; Sudut Panel Surya Berbasis Tableau</h2> 
+                            <hr class="modal-divider"> 
+                            <p><strong>Deskripsi Lengkap:</strong><br> 
+                            Perancangan dan pengembangan dashboard interaktif berbasis Tableau untuk mengolah serta memvisualisasikan data iradiasi harian dari pengukuran <em>lux meter</em> di wilayah Jakarta Selatan. Sistem ini dirancang untuk menganalisis pengaruh sudut kemiringan dan arah pemasangan panel surya terhadap penyerapan energi, serta memberikan rekomendasi konfigurasi optimal guna meningkatkan efisiensi daya energi terbarukan di lingkungan perkotaan tropis.</p> 
+
+                            <p><strong>Fitur &amp; Arsitektur:</strong></p> 
+                            <ul class="modal-list"> 
+                                <li><strong>Data Processing &amp; ETL Pipeline:</strong> Mengolah data mentah intensitas cahaya harian melalui proses pembersihan <em>missing value</em>, eliminasi duplikasi, dan standarisasi format agar siap dianalisis secara akurat.</li> 
+                                <li><strong>Dynamic Radiation Trend Analysis:</strong> Menyajikan visualisasi tren iradiasi matahari harian dan musiman untuk mengidentifikasi pola perubahan intensitas cahaya di Jakarta Selatan.</li> 
+                                <li><strong>Optimal Angle Recommendation:</strong> Menganalisis performa panel pada berbagai sudut kemiringan hingga 180° untuk menentukan rekomendasi sudut dan arah pemasangan yang paling efisien.</li> 
+                                <li><strong>Interactive Filters &amp; KPI Metrics:</strong> Dilengkapi fitur filter dinamis berdasarkan rentang waktu dan tingkat intensitas cahaya, serta indikator kinerja utama (KPI) efisiensi energi untuk mendukung pengambilan keputusan teknis.</li> 
+                            </ul>
+                             <!-- Tautan Platform di Dalam Modal -->
+                            <div class="modal-actions" style="margin-top: 1.5rem; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://public.tableau.com/shared/84988HN6W?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer" class="btn-tableau">
+                                    <i class="fa-brands fa-tableau"></i>Tableau Public
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+    </section>
+
+   <!-- SERTIFIKAT & LISENSI -->
+<section id="certificates" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Pengakuan & Kualifikasi</span>
+            <h2 class="section-title">Sertifikat & Pencapaian</h2>
+        </div>
+
+        <div class="certificates-grid">
+            <!-- Sertifikat 1 -->
+            <div class="certificate-card">
+                <div class="certificate-top">
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="certificate-badge badge-national">Sertifikasi Profesi</span>
+                </div>
+                <div class="certificate-content">
+                    <h3>Associate Data Scientist</h3>
+                    <p class="certificate-issuer">
+                        <i class="fa-solid fa-building-columns"></i> BNSP & Komdigi (VSGA)
+                    </p>
+                    <p class="certificate-desc">
+                        Sertifikasi kompetensi nasional dalam pemrosesan data, pemodelan statistik, machine learning dasar, analisis data berbasis RapidMiner & Python, serta visualisasi data.
+                    </p>
+                </div>
+                <div class="certificate-footer">
+                    <span class="certificate-date"><i class="fa-regular fa-calendar-check"></i> 2025 - 2028 </span>
+                    <a href="Profesi.jpeg" class="btn-verify" title="Lihat Sertifikat">
+                        Kredensial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+<!-- Sertifikat 2: Business Intelligence -->
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+                <span class="certificate-badge">Business Intelligence</span>
+            </div>
+            <div class="certificate-content">
+                <h3>Business Intelligence</h3>
+                <p class="certificate-issuer">
+                    <i class="fa-solid fa-chart-pie"></i> Business Intelligence Intern
+                </p>
+                <p class="certificate-desc">
+                    Pemrosesan data bisnis, pembuatan <em>dashboard</em> interaktif, analisis tren data, visualisasi data, serta penyusunan laporan strategis untuk pengambilan keputusan bisnis.
+                </p>
+            </div>
+            <div class="certificate-footer">
+                <span class="certificate-date"><i class="fa-regular fa-calendar-check"></i> 2025</span>
+                <a href="intern.jpg" class="btn-verify" title="Lihat Sertifikat">
+                    Kredensial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sertifikat 3: TOEFL -->
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <span class="certificate-badge">Language Proficiency</span>
+            </div>
+            <div class="certificate-content">
+                <h3>TOEFL Certificate</h3>
+                <p class="certificate-issuer">
+                    <i class="fa-solid fa-building-columns"></i> Educational Testing Service
+                </p>
+                <p class="certificate-desc">
+                    Sertifikasi kemahiran bahasa Inggris mencakup evaluasi <em>Listening Comprehension</em>, <em>Structure & Written Expression</em>, dan <em>Reading Comprehension</em>.
+                </p>
+            </div>
+            <div class="certificate-footer">
+                <span class="certificate-date"><i class="fa-regular fa-calendar-check"></i> 2025</span>
+                <a href="Toefl.jpeg" class="btn-verify" title="Lihat Sertifikat">
+                    Kredensial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sertifikat 4: Ketua Divisi Bilateral DHPM -->
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <span class="certificate-badge">Organization & Leadership</span>
+            </div>
+            <div class="certificate-content">
+                <h3>Ketua Divisi Bilateral</h3>
+                <p class="certificate-issuer">
+                    <i class="fa-solid fa-users"></i> Departemen Hubungan & Pengabdian Masyarakat (DHPM)
+                </p>
+                <p class="certificate-desc">
+                    Penghargaan atas kepemimpinan, koordinasi hubungan mahasiswa dan masyarakat, serta pengawasan program kerja strategis divisi.
+                </p>
+                </p>
+            </div>
+            <div class="certificate-footer">
+                <span class="certificate-date"><i class="fa-regular fa-calendar-check"></i> 2025</span>
+                <a href="BEM.png" class="btn-verify" title="Lihat Sertifikat">
+                    Kredensial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sertifikat 5: Donor Darah -->
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <span class="certificate-badge">Social & Volunteer</span>
+            </div>
+            <div class="certificate-content">
+                <h3>Partisipasi Aksi Donor Darah</h3>
+                <p class="certificate-issuer">
+                    <i class="fa-solid fa-hospital"></i> Palang Merah Indonesia (PMI)
+                </p>
+                <p class="certificate-desc">
+                    Sertifikat apresiasi atas partisipasi aktif dalam kegiatan sosial kemanusiaan donor darah secara sukarela untuk mendukung ketersediaan stok darah nasional.
+                </p>
+            </div>
+            <div class="certificate-footer">
+                <span class="certificate-date"><i class="fa-regular fa-calendar-check"></i> 2025</span>
+                <a href="DHPM.jpg" class="btn-verify" title="Lihat Sertifikat">
+                    Kredensial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    <!-- KONTAK -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <span class="section-subtitle">Koneksi &amp; Kolaborasi</span>
+                <h2 class="section-title">Mari Terhubung &amp; Bekerja Sama</h2>
+                <p class="contact-description">
+                    Tertarik untuk berkolaborasi dalam pengembangan AI, analisis data, otomatisasi alur kerja, atau membutuhkan layanan profesional? Saya selalu terbuka untuk diskusi proyek, peluang karier, maupun kerja sama lepas.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                    <!-- Email -->
+                    <a href="mailto:lennahutapea18@gmail.com" class="contact-card">
+                        <div class="contact-icon email-bg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Kirim Pesan</span>
+                            <h3>Email</h3>
+                            <p>lennahutapea18@gmail.com </p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                    </a>
+                </div>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6282210642113?text=Halo%20Lenna,%20saya%20tertarik%20untuk%20berdiskusi%20dan%20berkolaborasi." target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon wa-bg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">Respon Cepat</span>
+                        <h3>WhatsApp</h3>
+                        <p>+62 822-1064-2113</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/lenna-febriana-hutapea-b56060272" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon linkedin-bg">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">Jaringan Profesional</span>
+                        <h3>LinkedIn</h3>
+                        <p>Lenna Febriana Hutapea </p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/lennafebriana12" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon github-bg">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">Portofolio Kode</span>
+                        <h3>GitHub</h3>
+                        <p>Lihat Repositori &amp; Proyek</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Lenna Febriana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL OVERLAY -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="m-img" src="" alt="Proyek">
+            <h3 id="m-title">Judul</h3>
+            <p id="m-desc">Deskripsi</p>
+            <a id="m-link" href="#" target="_blank" class="btn btn-primary" style="display: inline-flex;">Lihat Dokumentasi</a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+    function openModal(modalId) {
+        // Sembunyikan semua konten detail modal lebih dulu
+        const contents = document.querySelectorAll('.modal-detail-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Tampilkan konten yang dipilih
+        const targetContent = document.getElementById(modalId);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
+
+        // Tampilkan overlay modal
+        document.getElementById('modalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden'; // Kunci scroll latar belakang
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto'; // Kembalikan scroll
+    }
+
+    function closeModalOnOverlay(event) {
+        // Tutup modal jika area luar kotak diklik
+        if (event.target.id === 'modalOverlay') {
+            closeModal();
+        }
+    }
+</script>
+</body>
+</html>
